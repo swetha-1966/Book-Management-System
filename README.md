@@ -1,30 +1,31 @@
-# Node.js + MongoDB + Mongoose Backend App (CRUD + Auth + JWT)
+# Book-Management-System
 
-This project demonstrates how to build a **production-ready backend REST API** using **Node.js**, **Express**, **MongoDB**, and **Mongoose**, following **industry-standard MVC architecture**.
+A Node.js + MongoDB + Mongoose backend application for managing books with JWT authentication, CRUD operations, and an MVC-based structure.
 
-It is designed to work seamlessly with a React frontend and supports authentication, authorization, pagination, and search.
+This project demonstrates how to build a production-ready backend REST API using Node.js, Express, MongoDB, and Mongoose. It is designed to work well with a React frontend and supports authentication, authorization, pagination, and search.
 
 ---
 
 ## 🚀 Features
 
-- User Authentication (Register & Login)
-- JWT-based Authorization
-- Full CRUD for Books
-- Pagination & Search (Backend-ready)
-- Protected Routes using Middleware
-- MongoDB Local & Atlas Support
+- User authentication with register and login
+- JWT-based authorization
+- Full CRUD for books
+- Pagination and search support
+- Protected routes with middleware
+- MongoDB local and Atlas support
 - Frontend-ready REST APIs
 
 ---
 
-## 📁 Project Structure````
+## 📁 Project Structure
+
 ```text
 my-node-app/
 │
 ├── controllers/
 │   ├── bookController.js     # Book CRUD, pagination, search
-│   └── authController.js     # Register & Login logic
+│   └── authController.js     # Register and login logic
 │
 ├── routes/
 │   ├── bookRoutes.js         # Book APIs
@@ -72,35 +73,23 @@ Used for JWT authentication.
 ## ⚙️ Environment Variables (.env)
 
 ### Local MongoDB
-MONGO_URL=mongodb://localhost:27017/bookdb  
-PORT=8800  
-JWT_SECRET=supersecretkey  
+MONGO_URL=mongodb://localhost:27017/bookdb
+PORT=8800
+JWT_SECRET=supersecretkey
 
 ### MongoDB Atlas
-MONGO_URL=mongodb+srv://<username>:<password>@cluster.mongodb.net/bookdb  
-PORT=8800  
-JWT_SECRET=supersecretkey  
+MONGO_URL=mongodb+srv://<username>:<password>@cluster.mongodb.net/bookdb
+PORT=8800
+JWT_SECRET=supersecretkey
 
-⚠️ Never commit `.env` to GitHub
-
----
-
-## 🔄 Request Flow
-
-Client (Frontend / Postman)  
-→ Express Server  
-→ Routes  
-→ Controllers  
-→ Models  
-→ MongoDB  
-→ JSON Response  
+⚠️ Never commit .env to GitHub.
 
 ---
 
 ## 🧪 Prerequisites
 
 - Node.js v16+
-- MongoDB (Local or Atlas)
+- MongoDB (local or Atlas)
 - Postman (optional)
 
 ---
@@ -111,31 +100,27 @@ Client (Frontend / Postman)
 npm install
 ```
 
-Installs:
-- express
-- mongoose
-- dotenv
-- cors
-- bcryptjs
-- jsonwebtoken
+This installs Express, Mongoose, Dotenv, CORS, bcryptjs, and jsonwebtoken.
 
 ---
 
 ## ▶️ Run the Project
 
-### Step 1: Seed Database (Run Once)
+### Step 1: Seed the Database (run once)
+
 ```bash
 node seed.js
 ```
 
-### Step 2: Start Server
+### Step 2: Start the Server
+
 ```bash
 node server.js
 ```
 
 Expected output:
-Server running on port 8800  
-Connected to MongoDB  
+- Server running on port 8800
+- Connected to MongoDB
 
 ---
 
@@ -171,11 +156,11 @@ Response:
 
 ## 📚 Book APIs
 
-### Get Books (Public, Pagination + Search)
+### Get Books (public, pagination + search)
 GET /books?page=1&limit=5&search=clean
 
-### Create Book (Protected)
-POST /books  
+### Create Book (protected)
+POST /books
 Headers:
 Authorization: Bearer <JWT_TOKEN>
 
@@ -187,18 +172,18 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Update Book (Protected)
-PUT /books/:id  
+### Update Book (protected)
+PUT /books/:id
 
-### Delete Book (Protected)
-DELETE /books/:id  
+### Delete Book (protected)
+DELETE /books/:id
 
 ---
 
 ## ❌ Common Errors
 
 - Missing JWT token
-- Invalid / expired token
+- Invalid or expired token
 - MongoDB connection issues
 - Wrong route prefix
 - IP not whitelisted in Atlas
@@ -210,7 +195,7 @@ DELETE /books/:id
 - MVC architecture in Node.js
 - REST API design
 - JWT authentication
-- Pagination & search APIs
+- Pagination and search APIs
 - Secure backend development
 - Frontend-backend integration
 
@@ -218,9 +203,5 @@ DELETE /books/:id
 
 ## 👤 Author
 
-**Nischal Aremanda**  
-Backend & Full‑Stack Developer
-
-
-
-
+Nischal Aremanda
+Backend & Full-Stack Developer
